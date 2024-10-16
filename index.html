@@ -25,21 +25,24 @@
         <b>Tell us a bit about you.</b><br>
         <small>To book your appointment, we need to verifie a few things for Dr.Karavasillis's office.</small></p>
         <form action="https://httpbin.org/get">
+            <fieldset>
+                <legend>Patient info</legend>
             <label for="email">Email</label>
             <br>
             <input type="email" name="email">
             <br>
             <label for="name">First name</label>
             <br>
-            <input type="firstname" name="firstname">
+            <input type="firstname" name="firstname" required>
             <br>
             <label for="name">Last name</label>
             <br>
-            <input type="lastname" name="lastname">
+            <input type="lastname" name="lastname" required>
             <br>
             <label for="dob">Date of birth</label>
             <br>
-            <input type="date" name="dateofbirth">
+            <input type="date" name="dateofbirth" required>
+        </fieldset>
             <br>
             <label for="sex">Sex</label>
             <br>
@@ -66,7 +69,12 @@
             <br>
             <br>
             <input type="postal" name="postal" placeholder="Postal / Zip Code">
-            <input type="country" name="country" placeholder="Country">
+            <label for="country"></label>
+            <select name="country" id="">
+            <option value="gn">Guinea</option>
+            <option value="us">United states</option>
+            <option value="fr">France</option>
+        </select>
             <br>
             <br>
             <p><strong>Visit reason</strong></p>
@@ -95,7 +103,7 @@
             <br>
             <label for="pwd">Create a password</label>
             <br>
-            <input type="password" name="pwd">
+            <input type="password" name="pwd" required size="15" maxlength="8">
             <br>
             <br>
             <ul type="disc">
